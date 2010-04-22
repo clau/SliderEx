@@ -1,0 +1,12 @@
+.slider {
+	width: 400px;
+	height: 16px;
+	margin: 5px 0;
+	background: url(images/slider.png) 0 center repeat-x;
+}
+
+.slider .knob {
+	width: 16px;
+	height: 16px;
+	background: url(images/knob.png) no-repeat center center;
+}
