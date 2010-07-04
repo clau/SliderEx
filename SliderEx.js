@@ -7,14 +7,12 @@ var SliderEx = new Class({
 			'releasedElement'],
 
 	releasedElement: function(event) {
-		SliderEx.dragging = false;
 		document.removeEvent('mousemove', this.clickedElement);
 		document.removeEvent('mouseup', this.releasedElement);
 	},
 
 	clickedElement: function(event) {
 		if (event.target != this.knob) {
-			SliderEx.dragging = true;
 			event.stop();
 			document.addEvent('mousemove', this.clickedElement);
 		}
