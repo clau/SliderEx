@@ -8,5 +8,6 @@
 .slider .knob {
 	width: 16px;
 	height: 16px;
+	pointer-events: none;
 	background: url(images/knob.png) no-repeat center center;
 }

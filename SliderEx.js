@@ -15,18 +15,11 @@ var SliderEx = new Class({
 	clickedElement: function(event) {
 		if (event.target != this.knob) {
 			SliderEx.dragging = true;
+			event.stop();
 			document.addEvent('mousemove', this.clickedElement);
 		}
 		document.addEvent('mouseup', this.releasedElement);
 
 		this.parent(event);
-	}
-});
-
-// For suppressing the text-selection cursor when dragging
-SliderEx.dragging = false;
-window.addEvent('selectstart', function(e) {
-	if (SliderEx.dragging) {
-		return false;
 	}
 });
